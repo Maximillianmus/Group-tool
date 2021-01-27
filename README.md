@@ -1,2 +1,3 @@
-# Group-tool
-A tool for the KTH course DH2321
+# Visualization29
+Visualisation for the course Ivis21
+Link to website: https://gits-15.sys.kth.se/pages/maxtru/Visualization29/

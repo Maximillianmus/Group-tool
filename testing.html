@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zooming and Panning</title>
+
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <style>
+      body { font-family: monospace; line-height: 160%; font-size: 18px; max-width: 80%; margin: 0;}
+      svg { border: 1px dotted black;}
+    </style>
+
+</head>
+
+<body>
+
+<script type="text/javascript"> 
+
+// colour vars
+    var tcYellow = "#FDBB30", tcBlack = "#130C0E", tcPink = "#EC008C", tcRed = "#EE3124", tcOrange = "#F47521", tcGreen = "#7AC143", tcBlue = "#00B0DD";
+// generic vars
+    var width = 940, height = 450, r = 50;
+
+    var data = [
+        [width / 2 - r, height / 2 - r],
+        [width / 2 - r, height / 2 + r],
+        [width / 2 + r, height / 2 - r],
+        [width / 2 + r, height / 2 + r]
+    ];
+
+    var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .call(  
+                d3.behavior.zoom() 
+                    .scaleExtent([1, 10])  
+                    .on("zoom", zoom)  
+            )
+            .append("g");
+
+    svg.selectAll("circle")
+            .data(data)
+            .enter().append("circle")
+            .attr("r", r)
+            .on("click", (d) => console.log(d))
+            .attr("fill", function (d, i) {
+              switch (i) {
+                case 0: return tcYellow;  
+                    break;
+                case 1: return tcGreen;  
+                    break;
+                case 2: return tcRed;  
+                    break;
+                case 3: return tcOrange;  
+                    break;
+                default : return tcBlue;
+              }
+            })
+            .attr("transform", function (d) {
+                return "translate(" + d + ")";
+            });
+
+    function zoom() {
+        svg.attr("transform", "translate(" 
+            + d3.event.translate 
+            + ")scale(" + d3.event.scale + ")");
+    }
+</script>
+
+</body>
+
+</html>

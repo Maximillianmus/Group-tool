@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="stylesheets/main.css">
+   
+    <title>IVIS Project 1 by Max and Erik</title>
+    <script src="https://d3js.org/d3.v4.js" defer></script>    <!-- This downloads d3 library -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+    <script src="javascripts/main.js" defer></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+  </head>
+  
+  <body>
+    <div id="firstColumn">
+      <div id="selectedDonut">
+        <h2>Selected Person</h1>
+        <h3 id="selectedAlias"></h2>
+      </div>
+      <div id="groupHandler">
+        <h2>Group Distribution</h2>
+      </div>
+    </div>
+    <div id="secondColumn">
+      <h1 id="title">Group Picker</h1>
+      <div id="charts"></div>
+      <div id="description">This is a visualization tool for creating groups with a balanced skillset and potentially common interests and ways of communication. 
+        Every donut chart represents one person and how they have self-evaluated their skill level in different fields. 
+        The donut shows the relative evaluation of a skill to all other skills as the most important part of making a group is having a good distribution of skills. 
+        It is also possible to filter for people with particular skills by using the sliders to set the lower bound of a skill. 
+        There is also some filtering by nominal data for when you want to know who uses a communication tool or which people have common interests. 
+        You can also click on a chart to get more information. 
+        A selected person can be added to the current group and be permanently greyed to make it easier to make consecutive groups without double memberships. 
+        <div id="Authors">Created by Max Truedsson and Erik Westergren</div>
+      </div>
+      
+    </div>
+    <div id= "thirdColumn">
+      <h2>Filtering Options</h3>
+      <div>
+        <h3>Skill Filtering</h3>
+        <div class="container"></div>
+      </div>
+      <div>
+        <h3 id="cat_titel">Category Filtering</h3>
+        <div class="dropdowncontainer"></div>
+      </div>
+    </div>
+     
+  </body>
+</html>

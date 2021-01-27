@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: dimgray;
+}
+
+*
+{
+   font-family: Helvetica !important;
+}
+
+#firstColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+#selectedDonut {
+    border: 2px solid black;
+    background-color:white;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 480px;
+}
+
+#selectedAlias {
+    margin: 0px;
+    height: 25px;
+}
+
+#Authors {
+    padding-top: 20px;
+}
+
+#selectedInformation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 140px;
+    width:350px;
+}
+
+.selectedInfoText {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#groupHandler {
+    border: 2px solid black;
+    background-color:white;
+    border-radius: 25px;
+    text-align: center;
+    height: 450px;
+}
+
+#groupMembers {
+    width:350px;
+}
+
+#completeGroupButton {
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 120px;
+}
+
+#cat_titel{
+    margin-top: 0px;
+}
+
+#secondColumn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#title {
+    width: 240px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+}
+
+#description {
+    text-align: center;
+    border: 2px solid black;
+    background-color:white;
+    margin-top: 20px;
+    border-radius: 25px;
+    width: 800px;
+    padding: 10px;
+}
+
+#thirdColumn{
+    text-align: center;
+    border: 2px solid black;
+    background-color:white;
+    border-radius: 25px;
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 680px;
+    height: 700px;
+}
+
+.divSliderTitle {
+    margin:0px
+}
+
+.dropdowncontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.dropdownTitle {
+    margin:5px;
+}
